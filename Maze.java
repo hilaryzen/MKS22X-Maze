@@ -18,8 +18,9 @@ public class Maze{
         //COMPLETE CONSTRUCTOR
         File text = new File(filename);
         Scanner input = new Scanner(text);
+        ArrayList<String> lines = new ArrayList<String>();
         while (input.hasNextLine()) {
-          String line = input.nextLine();
+          lines.add(input.nextLine());
         }
     }
 
