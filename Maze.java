@@ -22,6 +22,12 @@ public class Maze{
         while (input.hasNextLine()) {
           lines.add(input.nextLine());
         }
+        maze = new char[lines.size()][lines.get(0).length()]; //Creating array
+        for (int i = 0; i < lines.size(); i++) {
+          for (int j = 0; j < lines.get(i).length(); j++) {
+            maze[i][j] = lines.get(i).charAt(j);
+          }
+        }
     }
 
 
