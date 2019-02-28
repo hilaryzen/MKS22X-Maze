@@ -94,8 +94,19 @@ public class Maze{
         //COMPLETE SOLVE
         if (maze[row][col] == 'E') {
           return total;
+        } else {
+
         }
         return total; //so it compiles
+    }
+
+    public boolean move(int row, int col) {
+      if (maze[row][col] == ' ') {
+        maze[row][col] == '@';
+        return true;
+      } else {
+        return false;
+      }
     }
 
 
