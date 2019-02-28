@@ -97,7 +97,9 @@ public class Maze{
           return total;
         } else {
           if (move(row,col)) {
+            if (move(row - 1, col)) {
 
+            }
           }
         }
         return 0; //so it compiles
@@ -106,6 +108,8 @@ public class Maze{
     public boolean move(int row, int col) {
       if (maze[row][col] == ' ' || maze[row][col] == 'S') {
         maze[row][col] = '@';
+        return true;
+      } else if (maze[row][col] == 'E') {
         return true;
       } else {
         return false;
