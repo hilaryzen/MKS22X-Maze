@@ -84,7 +84,7 @@ public class Maze{
         All visited spots that were not part of the solution are changed to '.'
         All visited spots that are part of the solution are changed to '@'
     */
-    private int solve(int row, int col, int total){ //you can add more parameters since this is private
+    private int solve(int row, int col){ //you can add more parameters since this is private
         //automatic animation! You are welcome.
         if(animate){
             clearTerminal();
@@ -92,17 +92,20 @@ public class Maze{
             wait(20);
         }
         //COMPLETE SOLVE
+        int total = 0;
         if (maze[row][col] == 'E') {
           return total;
         } else {
+          if (move(row,col)) {
 
+          }
         }
-        return total; //so it compiles
+        return 0; //so it compiles
     }
 
     public boolean move(int row, int col) {
-      if (maze[row][col] == ' ') {
-        maze[row][col] == '@';
+      if (maze[row][col] == ' ' || maze[row][col] == 'S') {
+        maze[row][col] = '@';
         return true;
       } else {
         return false;
