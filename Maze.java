@@ -30,6 +30,16 @@ public class Maze{
         }
     }
 
+    public String toString() {
+      String ans = "";
+      for (int i = 0; i < maze.length; i++) {
+        for (int j = 0; j < maze[i].length; j++) {
+          ans += maze[i][j];
+        }
+        ans += '\n';
+      }
+      return ans;
+    }
 
     private void wait(int millis){
          try {
