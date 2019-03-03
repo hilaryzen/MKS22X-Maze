@@ -70,6 +70,13 @@ public class Maze{
       //erase the S
       //and start solving at the location of the s.
       //return solve(???,???);
+      for (int i = 0; i < maze.length; i++) {
+        for (int j = 0; j < maze[i].length; j++) {
+          if (maze[i][j] == 'S') {
+            return solve(i,j,0);
+          }
+        }
+      }
       return 0;
     }
 
