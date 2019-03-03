@@ -105,6 +105,7 @@ public class Maze{
           return total;
         } else {
           if (move(row,col)) {
+            /*
             if (move(row - 1, col)) {
               return solve(row - 1, col, total + 1);
             } else if (move(row, col - 1)) {
@@ -114,9 +115,17 @@ public class Maze{
             } else if (move(row, col + 1)) {
               return solve(row, col + 1, total + 1);
             }
+            */
+            for (int i = 0; i < movesR.length; i++) {
+              int result = solve(row + movesR[i], col + movesC[i], total + 1);
+              if (result != -1) {
+                return result;
+              }
+            }
+            remove(row, col);
           }
+          return -1;
         }
-        return 0; //so it compiles
     }
 
     public boolean move(int row, int col) {
