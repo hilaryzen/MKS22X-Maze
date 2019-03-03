@@ -105,26 +105,17 @@ public class Maze{
           return total;
         } else {
           if (move(row,col)) {
-            /*
-            if (move(row - 1, col)) {
-              return solve(row - 1, col, total + 1);
-            } else if (move(row, col - 1)) {
-              return solve(row, col - 1, total + 1);
-            } else if (move(row + 1, col)) {
-              return solve(row + 1, col, total + 1);
-            } else if (move(row, col + 1)) {
-              return solve(row, col + 1, total + 1);
-            }
-            */
+            //Runs through all possible moves
             for (int i = 0; i < movesR.length; i++) {
               int result = solve(row + movesR[i], col + movesC[i], total + 1);
+              //Only return a result if it is a possible number of moves
               if (result != -1) {
                 return result;
               }
             }
-            remove(row, col);
+            remove(row, col); //Backtracking
           }
-          return -1;
+          return -1; //If maze is unsolvable
         }
     }
 
