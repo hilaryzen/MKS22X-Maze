@@ -98,6 +98,12 @@ public class Maze{
           if (move(row,col)) {
             if (move(row - 1, col)) {
               return solve(row - 1, col, total + 1);
+            } else if (move(row, col - 1)) {
+              return solve(row, col - 1, total + 1);
+            } else if (move(row + 1, col)) {
+              return solve(row + 1, col, total + 1);
+            } else if (move(row, col + 1)) {
+              return solve(row, col + 1, total + 1);
             }
           }
         }
