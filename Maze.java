@@ -132,7 +132,7 @@ public class Maze{
 
     public boolean remove(int row, int col) {
       if (maze[row][col] == '@') {
-        maze[row][col] = ' ';
+        maze[row][col] = '.';
         return true;
       } else {
         return false;
