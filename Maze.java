@@ -95,12 +95,13 @@ public class Maze{
     */
     private int solve(int row, int col, int total){ //you can add more parameters since this is private
         //automatic animation! You are welcome.
+        /*
         if(animate){
             clearTerminal();
             System.out.println(this);
             wait(20);
         }
-        //COMPLETE SOLVE
+        */
         if (maze[row][col] == 'E') {
           return total;
         } else {
